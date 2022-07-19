@@ -1,6 +1,20 @@
 // the user enters either rock, paper, or scissors 
+let userChoice = prompt("Please select rock, paper, or scissors.");
 // if the user enters any other choice, an error is displayed
+
+if (userChoice ===("scissors")){
+    ("");
+} else if (userChoice===("rock")){
+    ("");
+} else if (userChoice===("paper")){
+    ("");
+} else {
+    alert("Error")
+};
+console.log (userChoice);
+
 // the computer randomly selects either rock, paper, or scissors 
+
 let options = ["rock", "paper", "scissors"];
 let computerChoice;
 
