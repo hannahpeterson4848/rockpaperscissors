@@ -13,7 +13,8 @@ if (userChoice ===("scissors")){
 };
 console.log (userChoice);
 
-// the computer randomly selects either rock, paper, or scissors 
+// the computer randomly selects either rock, paper, 
+//or scissors 
 
 let options = ["rock", "paper", "scissors"];
 let computerChoice;
@@ -25,8 +26,14 @@ return computerChoice;
 }
 console.log(getComputerChoice ());
 
-// compare the values the user entered and the computer chose
-// determine a winner assuming paper beats rock, rock beats scissors, scissors beats paper 
+// compare the values the user entered and the computer chose 
+//and determine a winner assuming paper beats rock, 
+//rock beats scissors, scissors beats paper 
+
 // if the computers choice and users choice are the same, display message "You tied"
+if (userChoice == computerChoice) {
+    alert("You Tied!");
+}
 // if computer wins, display message "Sorry, you lost"
 // if user wins, display message "You won!"
+
