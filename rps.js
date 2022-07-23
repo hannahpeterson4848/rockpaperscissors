@@ -4,7 +4,9 @@ let userChoice;
 //prompt user to enter rock paper or scissors
 function getUserChoice (){
     userChoice = prompt("Please select rock, paper, or scissors.");
-//    if (userChoice == "rock" || "paper" || "scissors" || userError ());
+//if (userChoice == "rock" || "paper" || "scissors" || userError ());
+// let user choice be case insensitive
+    userChoice = userChoice.toLowerCase();
     if (userChoice === ("scissors"))
         (userChoice = "scissors");
     else if (userChoice === ("rock")) 
