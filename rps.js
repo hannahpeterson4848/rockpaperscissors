@@ -1,6 +1,6 @@
+//create a variable for the intended user input
 let options = ["rock", "paper", "scissors"];
 let userChoice;
-
 //prompt user to enter rock paper or scissors
 function getUserChoice (){
     userChoice = prompt("Please select rock, paper, or scissors.");
@@ -23,11 +23,8 @@ function userError (){
     else {getUserChoice();
     };
 } 
-
 console.log(getUserChoice ());
-
 // the computer randomly selects either rock paper or scissors 
-
 let computerChoice;
 
 function getComputerChoice (){
@@ -36,23 +33,24 @@ computerChoice = options[randomOption];
 return computerChoice;
 }
 console.log(getComputerChoice ());
-
-// compare the values the user entered and the computer chose and determine a winner assuming paper beats rock, 
-//rock beats scissors, scissors beats paper if computer wins, display message "You Lost! "
-if (userChoice == "rock" && computerChoice == "paper") {
-    alert("You Lost!");
-} else if (userChoice == "paper" && computerChoice == "scissors") {
-    alert ("You Lost!");
-} else if (userChoice == "scissors" && computerChoice == "rock"){
-    alert ("You Lost!");
-// if the computers choice and users choice are the same, display message "You tied"
-} else if (userChoice == computerChoice) {
-    alert("You Tied!");
-} 
-// if user wins, display message "You won!"
- else {
-    alert ("You Won!");
+// compare the values the user entered and the computer chose and determine a winner assuming paper beats rock, rock beats scissors, scissors beats paper 
+// create a function to play one round of the game
+function playRound (computerChoice, userChoice){
+    if (userChoice == "rock" && computerChoice == "paper") {
+        return ("You Lost!");
+    } else if (userChoice == "paper" && computerChoice == "scissors") {
+        return ("You Lost!");
+    } else if (userChoice == "scissors" && computerChoice == "rock"){
+        return ("You Lost!");
+    } else if (userChoice == computerChoice) {
+        return("You Tied!");
+    }  else {
+        return ("You Won!");
+    }
 }
+
+console.log(playRound(computerChoice, userChoice));
+
 
 
 
