@@ -23,7 +23,7 @@ function userError (){
     else {getUserChoice();
     };
 } 
-console.log(getUserChoice ());
+//console.log(getUserChoice ());
 // the computer randomly selects either rock paper or scissors 
 let computerChoice;
 
@@ -32,7 +32,7 @@ let randomOption = Math.floor(Math.random()*options.length);
 computerChoice = options[randomOption];
 return computerChoice;
 }
-console.log(getComputerChoice ());
+//console.log(getComputerChoice ());
 // compare the values the user entered and the computer chose and determine a winner assuming paper beats rock, rock beats scissors, scissors beats paper 
 // create a function to play one round of the game
 function playRound (computerChoice, userChoice){
@@ -49,8 +49,23 @@ function playRound (computerChoice, userChoice){
     }
 }
 
-console.log(playRound(computerChoice, userChoice));
-
+//console.log(playRound(computerChoice, userChoice));
+//create a variable to store the results of 1 round of rock paper scissors
+let roundResults;
+//create a function that plays 5 rounds of rock paper scissors
+function game (){
+    for (let i = 0; i < 5; i++) {
+    //call playRound function with new computerChoices and userChoices each iteration
+    getComputerChoice ();
+    getUserChoice ();
+    //record the results in a var each time a round is played
+    roundResults = playRound ();
+    //return the results of each round to the console
+    console.log(roundResults);    
+    }
+}
+//play a game of rock paper scissors
+game ();
 
 
 
