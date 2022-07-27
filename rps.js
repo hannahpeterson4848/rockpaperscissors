@@ -39,15 +39,15 @@ function playRound (){
     console.log(computerChoice);
     console.log(userChoice);
     if (userChoice == "rock" && computerChoice == "paper") {
-        return ("You Lost!");
+        console.log ("You Lost!");
     } else if (userChoice == "paper" && computerChoice == "scissors") {
-        return ("You Lost!");
+        console.log  ("You Lost!");
     } else if (userChoice == "scissors" && computerChoice == "rock"){
-        return ("You Lost!");
+        console.log  ("You Lost!");
     } else if (userChoice == computerChoice) {
-        return("You Tied!");
+        console.log ("You Tied!");
     }  else {
-        return ("You Won!");
+        console.log ("You Won!");
     }
 }
 //create a variable to store the results of 1 round 
