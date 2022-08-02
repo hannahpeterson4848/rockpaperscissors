@@ -32,6 +32,10 @@ computerChoice = options[randomOption];
 return computerChoice;
 }
 // compare the values the user entered and the computer chose and determine a winner assuming paper beats rock, rock beats scissors, scissors beats paper 
+let roundOutcome;
+// create an variable to track user and computer score
+let userScore = 0;
+let computerScore=0;
 // create a function to play one round of the game
 function playRound (){
     getComputerChoice ();
@@ -39,15 +43,28 @@ function playRound (){
     console.log(computerChoice);
     console.log(userChoice);
     if (userChoice == "rock" && computerChoice == "paper") {
-        console.log ("You Lost!");
+        roundOutcome = ("You Lost!");
+        userScore --;
+        computerScore ++;
+        console.log (roundOutcome);
     } else if (userChoice == "paper" && computerChoice == "scissors") {
-        console.log  ("You Lost!");
+        roundOutcome = ("You Lost!");
+        userScore --;
+        computerScore ++;
+        console.log (roundOutcome);
     } else if (userChoice == "scissors" && computerChoice == "rock"){
-        console.log  ("You Lost!");
+        roundOutcome = ("You Lost!");
+        userScore --;
+        computerScore ++;
+        console.log (roundOutcome);
     } else if (userChoice == computerChoice) {
-        console.log ("You Tied!");
+        roundOutcome = ("You Tied!");
+        console.log (roundOutcome);
     }  else {
-        console.log ("You Won!");
+        roundOutcome = ("You Won!");
+        userScore ++;
+        computerScore --;
+        console.log (roundOutcome);
     }
 }
 //create a variable to store the results of 1 round 
@@ -58,6 +75,15 @@ function game (){
     //call playRound function 5 times
     gameResults = playRound ();
     }
+    //determine score outcome
+    if (userScore>computerScore) {
+       console.log("You won the game!");
+    } else if (userScore=computerScore){
+        console.log ("You tied!")
+    } else {
+        console.log("You lost the game.")
+    }
+
 }
 //play a game 
 game ();
