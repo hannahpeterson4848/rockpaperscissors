@@ -25,8 +25,13 @@ body {
 }
 
 .button {
-    background-color: gold;
     color: blue;
+    font-size: 36px;
+    border-style:solid;
+    border-width: 5px;
+    border-color: gray;
+    border-radius: 10px;
+    padding: 16px;
 }
 
 .body{
