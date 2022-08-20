@@ -1,20 +1,35 @@
 //create a variable for the intended user input
 let options = ["rock", "paper", "scissors"];
-let userChoice;
+let userChoice; 
+
+const btnRock = document.querySelector(".button-rock");
+const btnPaper = document.querySelector(".button-paper");
+const btnScissors = document.querySelector(".button-scissors");
+
+btnRock.addEventListener ('click', userChoice = "rock")
+btnPaper.addEventListener ('click', userChoice = "paper")
+btnScissors.addEventListener ('click', userChoice = "scissors")
+
+
+
+
+
+
+
 //create a function to prompt user to enter rock paper or scissors
-function getUserChoice (){
-    userChoice = prompt("Please select rock, paper, or scissors.");
-//let user choice be case insensitive
-    userChoice = userChoice.toLowerCase();
-    if (userChoice === ("scissors"))
-        (userChoice = "scissors");
-    else if (userChoice === ("rock")) 
-        userChoice = ("rock");
-    else if (userChoice === ("paper")) 
-        userChoice = ("paper");
-        else { userError()};
-    return userChoice;
-    }
+//function getUserChoice (){
+  //  userChoice = prompt("Please select rock, paper, or scissors.");
+    //let user choice be case insensitive 
+    //userChoice = userChoice.toLowerCase();
+    //if (userChoice === ("scissors"))
+      //  (userChoice = "scissors");
+    //else if (userChoice === ("rock")) 
+      //  userChoice = ("rock");
+    //else if (userChoice === ("paper")) 
+      //  userChoice = ("paper");
+        //else { userError()};
+    //return userChoice;
+    //}
 //create a function to re-prompt user if input does not equal rock paper or scissors
 function userError (){
     if (options.includes(userChoice) == true){
@@ -67,22 +82,22 @@ function playRound (){
 }
 let gameResults;
 //create a function that plays 5 rounds of rock paper scissors
-function playGame (){
-    for (let i = 0; i < 5; i++) {
+//function playGame (){
+  //  for (let i = 0; i < 5; i++) {
     //call playRound function 5 times
-    gameResults = playRound ();
-    }
+    //gameResults = playRound ();
+    //}
     //determine score outcome
-    if (userScore>computerScore) {
-       console.log("You won the game!");
-    } else if (userScore=computerScore){
-        console.log ("You tied!")
-    } else {
-        console.log("You lost the game.")
-    }
+    //if (userScore>computerScore) {
+      // console.log("You won the game!");
+    //} else if (userScore=computerScore){
+        //console.log ("You tied!")
+    //} else {
+        //console.log("You lost the game.")
+    //}
 }
 //play a game 
-playGame ();
+//playGame ();
 
 
 
