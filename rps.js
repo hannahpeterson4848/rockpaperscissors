@@ -6,16 +6,15 @@ const btnRock = document.querySelector(".button-rock");
 const btnPaper = document.querySelector(".button-paper");
 const btnScissors = document.querySelector(".button-scissors");
 
-btnRock.addEventListener ('click', userChoice = "rock")
-btnPaper.addEventListener ('click', userChoice = "paper")
-btnScissors.addEventListener ('click', userChoice = "scissors")
-
-
-
-
-
-
-
+btnRock.addEventListener ('click', function (){
+    userChoice = "rock";
+});
+btnPaper.addEventListener ('click', function (){
+    userChoice = "paper";
+});
+btnScissors.addEventListener ('click', function (){
+    userChoice = "scissors";
+});
 //create a function to prompt user to enter rock paper or scissors
 //function getUserChoice (){
   //  userChoice = prompt("Please select rock, paper, or scissors.");
@@ -31,12 +30,12 @@ btnScissors.addEventListener ('click', userChoice = "scissors")
     //return userChoice;
     //}
 //create a function to re-prompt user if input does not equal rock paper or scissors
-function userError (){
-    if (options.includes(userChoice) == true){
-    ("");}
-    else {getUserChoice();
-    };
-} 
+//function userError (){
+  //  if (options.includes(userChoice) == true){
+    //("");}
+    //else {getUserChoice();
+    //};
+//} 
 // create a function where the computer randomly selects either rock paper or scissors 
 let computerChoice;
 function getComputerChoice (){
@@ -52,7 +51,6 @@ let computerScore=0;
 // create a function to play one round of rock, paper, scissors
 function playRound (){
     getComputerChoice ();
-    getUserChoice();
     console.log(computerChoice);
     console.log(userChoice);
     if (userChoice == "rock" && computerChoice == "paper") {
@@ -80,7 +78,8 @@ function playRound (){
         console.log (roundOutcome);
     }
 }
-let gameResults;
+console.log (playRound());
+//let gameResults;
 //create a function that plays 5 rounds of rock paper scissors
 //function playGame (){
   //  for (let i = 0; i < 5; i++) {
@@ -95,7 +94,7 @@ let gameResults;
     //} else {
         //console.log("You lost the game.")
     //}
-}
+//}
 //play a game 
 //playGame ();
 
