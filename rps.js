@@ -27,26 +27,25 @@ function playRound (userChoice){
         roundOutcome = ("You Lost!");
         userScore --;
         computerScore ++;
-        alert (roundOutcome);
     } else if (userChoice == "paper" && computerChoice == "scissors") {
         roundOutcome = ("You Lost!");
         userScore --;
         computerScore ++;
-        alert (roundOutcome);
     } else if (userChoice == "scissors" && computerChoice == "rock"){
         roundOutcome = ("You Lost!");
         userScore --;
         computerScore ++;
-        alert (roundOutcome);
     } else if (userChoice == computerChoice) {
         roundOutcome = ("You Tied!");
-        alert (roundOutcome);
     }  else {
         roundOutcome = ("You Won!");
         userScore ++;
         computerScore --;
-        alert (roundOutcome);
     }
+    document.getElementById("userScore").innerHTML=userScore;
+    document.getElementById("computerScore").innerHTML=computerScore;
+    document.getElementById("userChoice").innerHTML=userChoice;
+    document.getElementById("computerChoice").innerHTML=computerChoice;
 }
 btnRock.addEventListener ('click', function () {
     playRound("rock");
