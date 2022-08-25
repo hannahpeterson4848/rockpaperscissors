@@ -18,16 +18,21 @@ function getComputerChoice (){
     computerChoice = options[randomOption];
     return computerChoice;
 }
-
+function resetGame (){
+    userScore=0;
+    computerScore=0;
+    document.getElementById("userScore").innerHTML="";
+    document.getElementById("computerScore").innerHTML="";
+    document.getElementById("userChoice").innerHTML="";
+    document.getElementById("computerChoice").innerHTML="";
+}
 function checkScore (){
-    if (userScore > 5) {
+    if (userScore >= 5) {
         alert ("You won! Woohoo!")
-        userScore = 0;
-        computerScore = 0;
-    } else if (computerScore > 5) {
+        resetGame ();
+    } else if (computerScore >= 5) {
         alert ("You lost!")
-        userScore = 0;
-        computerScore = 0;
+        resetGame ();
     }
 }
 
@@ -35,22 +40,18 @@ function playRound (userChoice){
     getComputerChoice ();
     if (userChoice == "rock" && computerChoice == "paper") {
         roundOutcome = ("You Lost!");
-        userScore --;
         computerScore ++;
     } else if (userChoice == "paper" && computerChoice == "scissors") {
         roundOutcome = ("You Lost!");
-        userScore --;
         computerScore ++;
     } else if (userChoice == "scissors" && computerChoice == "rock"){
         roundOutcome = ("You Lost!");
-        userScore --;
         computerScore ++;
     } else if (userChoice == computerChoice) {
         roundOutcome = ("You Tied!");
     }  else {
         roundOutcome = ("You Won!");
         userScore ++;
-        computerScore --;
     }
     document.getElementById("userScore").innerHTML=userScore;
     document.getElementById("computerScore").innerHTML=computerScore;
