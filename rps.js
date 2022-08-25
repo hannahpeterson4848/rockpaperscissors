@@ -23,11 +23,11 @@ function checkScore (){
     if (userScore > 5) {
         alert ("You won! Woohoo!")
         userScore = 0;
-        checkScore = 0;
+        computerScore = 0;
     } else if (computerScore > 5) {
         alert ("You lost!")
         userScore = 0;
-        checkScore = 0;
+        computerScore = 0;
     }
 }
 
