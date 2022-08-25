@@ -41,6 +41,12 @@ body {
     align-items: center;
 }
 
+.scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .webpage{
     display: flex;
     flex-direction: column;
