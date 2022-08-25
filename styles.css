@@ -53,3 +53,7 @@ body {
     justify-content: space-between;
     height: 100vh;
 }
+
+p {
+    text-align: center;
+}

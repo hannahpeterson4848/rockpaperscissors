@@ -19,10 +19,20 @@ function getComputerChoice (){
     return computerChoice;
 }
 
+function checkScore (){
+    if (userScore > 5) {
+        alert ("You won! Woohoo!")
+        userScore = 0;
+        checkScore = 0;
+    } else if (computerScore > 5) {
+        alert ("You lost!")
+        userScore = 0;
+        checkScore = 0;
+    }
+}
+
 function playRound (userChoice){
     getComputerChoice ();
-    console.log(computerChoice);
-    console.log(userChoice);
     if (userChoice == "rock" && computerChoice == "paper") {
         roundOutcome = ("You Lost!");
         userScore --;
@@ -46,7 +56,11 @@ function playRound (userChoice){
     document.getElementById("computerScore").innerHTML=computerScore;
     document.getElementById("userChoice").innerHTML=userChoice;
     document.getElementById("computerChoice").innerHTML=computerChoice;
+    checkScore ();
 }
+
+
+
 btnRock.addEventListener ('click', function () {
     playRound("rock");
 });
@@ -76,20 +90,20 @@ btnScissors.addEventListener ('click', function () {
 
 //let gameResults;
 //create a function that plays 5 rounds of rock paper scissors
-//function playGame (){
-  //  for (let i = 0; i < 5; i++) {
+function playGame (){
+  for (let i = 0; i < 5; i++) {
     //call playRound function 5 times
-    //gameResults = playRound ();
-    //}
+    gameResults = playRound ();
+    }
     //determine score outcome
-    //if (userScore>computerScore) {
-      // console.log("You won the game!");
-    //} else if (userScore=computerScore){
-        //console.log ("You tied!")
-    //} else {
-        //console.log("You lost the game.")
-    //}
-//}
+    if (userScore>computerScore) {
+        alert ("You won the game!");
+    } else if (userScore=computerScore){
+        alert ("You tied!");
+    } else {
+        alert ("You lost the game.");
+    }
+}
 //play a game 
 //playGame ();
 
